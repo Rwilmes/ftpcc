@@ -5,6 +5,8 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import javax.swing.ImageIcon;
+
 public class IO {
 
 	/** Reads a file from the given path and returns the data as byte[]. **/
@@ -19,7 +21,8 @@ public class IO {
 	}
 
 	/** Writes the given byte[] data to the path. **/
-	public static void writeFile(String path, byte[] data, boolean force) throws IOException {
+	public static void writeFile(String path, byte[] data, boolean force)
+			throws IOException {
 		File f = new File(path);
 
 		if (f.exists() && f.isDirectory()) {
@@ -39,5 +42,10 @@ public class IO {
 		FileOutputStream f_out = new FileOutputStream(f);
 		f_out.write(data);
 		f_out.close();
+	}
+
+	/** Reads an ImageIcon from the given path. **/
+	public static ImageIcon readImageIcon(String path) {
+		return new ImageIcon(path);
 	}
 }
