@@ -1,5 +1,12 @@
 package ftpcc.network;
 
+/**
+ * A Connection object represents a connection to a destination. What kind of
+ * Connection and how it will be established depends on the implementation.
+ * 
+ * @author RWilmes
+ * 
+ */
 public abstract class Connection {
 
 	public enum CONNECTION_STATUS {

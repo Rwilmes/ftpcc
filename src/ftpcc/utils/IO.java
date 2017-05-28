@@ -7,6 +7,12 @@ import java.io.IOException;
 
 import javax.swing.ImageIcon;
 
+/**
+ * Utility class for IO operations.
+ * 
+ * @author RWilmes
+ *
+ */
 public class IO {
 
 	/** Reads a file from the given path and returns the data as byte[]. **/

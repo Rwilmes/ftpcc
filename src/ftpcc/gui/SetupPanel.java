@@ -3,6 +3,12 @@ package ftpcc.gui;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
+/**
+ * A SetupPanel object is a GUI object used for basic configuration by the user.
+ * 
+ * @author RWilmes
+ * 
+ */
 public class SetupPanel extends JPanel {
 
 	public SetupPanel() {

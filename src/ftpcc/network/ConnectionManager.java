@@ -4,6 +4,12 @@ import java.util.List;
 
 import ftpcc.network.Connection.CONNECTION_STATUS;
 
+/**
+ * A ConnectionManager manages several Connection objects.
+ * 
+ * @author RWilmes
+ *
+ */
 public abstract class ConnectionManager {
 
 	private List<Connection> connections;

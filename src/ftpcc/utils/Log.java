@@ -4,6 +4,12 @@ import java.io.PrintStream;
 
 import javax.swing.JTextArea;
 
+/**
+ * The Log class delivers basic logging capabilities.
+ * 
+ * @author RWilmes
+ * 
+ */
 public class Log {
 
 	public static final JTextArea logTextArea = initTextArea();

@@ -9,6 +9,12 @@ import javax.swing.JTextArea;
 
 import ftpcc.utils.Log;
 
+/**
+ * The LogPanel is a special GUI panel showing logging information.
+ * 
+ * @author RWilmes
+ * 
+ */
 public class LogPanel extends JPanel {
 
 	public LogPanel() {

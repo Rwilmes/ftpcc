@@ -1,5 +1,11 @@
 package ftpcc.network;
 
+/**
+ * An object representing a NetworkAddress.
+ * 
+ * @author RWilmes
+ *
+ */
 public class NetworkAddress {
 
 	private String name;

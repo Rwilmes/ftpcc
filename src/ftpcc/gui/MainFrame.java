@@ -8,6 +8,12 @@ import javax.swing.JTabbedPane;
 
 import ftpcc.utils.Config;
 
+/**
+ * The MainFrame contains all GUI components of a ftpCC interface.
+ * 
+ * @author RWilmes
+ * 
+ */
 public class MainFrame extends JFrame {
 
 	private JTabbedPane tabPane;
