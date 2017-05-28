@@ -2,7 +2,11 @@ package ftpcc.utils;
 
 import java.io.PrintStream;
 
+import javax.swing.JTextArea;
+
 public class Log {
+
+	public static final JTextArea logTextArea = initTextArea();
 
 	private static PrintStream logStream = System.out;
 	private static PrintStream warnStream = System.out;
@@ -11,7 +15,9 @@ public class Log {
 	public static String delimiter = "~";
 
 	public static void log(String msg) {
-		logStream.println(delimiter + " " + msg);
+		String printString = delimiter + " " + msg;
+		logStream.println(printString);
+		logTextArea.setText(logTextArea.getText() + "\n" + printString);
 	}
 
 	public static void warn(String msg) {
@@ -20,5 +26,11 @@ public class Log {
 
 	public static void err(String msg) {
 		errorStream.println(msg);
+	}
+
+	private static JTextArea initTextArea() {
+		JTextArea temp = new JTextArea();
+
+		return temp;
 	}
 }
