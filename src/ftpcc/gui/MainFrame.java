@@ -1,6 +1,5 @@
-package ftpcc;
+package ftpcc.gui;
 
 public class MainFrame {
-
 
 }
