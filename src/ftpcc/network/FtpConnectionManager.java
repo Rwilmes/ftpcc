@@ -1,7 +1,11 @@
 package ftpcc.network;
 
-import ftpcc.network.Connection.CONNECTION_STATUS;
-
+/**
+ * Manages Ftp connections.
+ * 
+ * @author RWilmes
+ * 
+ */
 public class FtpConnectionManager extends ConnectionManager {
 
 	// TODO: implement!
@@ -13,19 +17,7 @@ public class FtpConnectionManager extends ConnectionManager {
 	}
 
 	@Override
-	public Connection connect(Connection connection) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Connection disconnect(Connection connection) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public CONNECTION_STATUS getConnectionStatus(Connection connection) {
+	public Connection connect(NetworkAddress destination) {
 		// TODO Auto-generated method stub
 		return null;
 	}

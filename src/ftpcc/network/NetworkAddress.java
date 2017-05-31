@@ -4,7 +4,7 @@ package ftpcc.network;
  * An object representing a NetworkAddress.
  * 
  * @author RWilmes
- *
+ * 
  */
 public class NetworkAddress {
 
@@ -22,6 +22,10 @@ public class NetworkAddress {
 
 	public String getAddress() {
 		return address;
+	}
+
+	public boolean equals(NetworkAddress a) {
+		return a.getAddress().equals(this.address);
 	}
 
 }

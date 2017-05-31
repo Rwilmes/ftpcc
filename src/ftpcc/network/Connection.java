@@ -1,5 +1,7 @@
 package ftpcc.network;
 
+import ftpcc.utils.Log;
+
 /**
  * A Connection object represents a connection to a destination. What kind of
  * Connection and how it will be established depends on the implementation.
@@ -15,20 +17,32 @@ public abstract class Connection {
 
 	private CONNECTION_STATUS status;
 
-	private NetworkAddress destination;
-	private ConnectionManager manager;
+	protected NetworkAddress destination;
+	protected ConnectionManager manager;
 
 	public Connection(NetworkAddress destination, ConnectionManager manager) {
 		this.destination = destination;
 		this.manager = manager;
-		this.status = CONNECTION_STATUS.PREMATURE;
+		this.setStatus(CONNECTION_STATUS.PREMATURE);
 	}
 
 	public NetworkAddress getDestination() {
 		return destination;
 	}
 
-	public Connection disconnect() {
-		return this.manager.disconnect(this);
+	public abstract void disconnect();
+
+	protected void setStatus(CONNECTION_STATUS status) {
+		Log.log("new status: " + status);
+		this.status = status;
 	}
+
+	public CONNECTION_STATUS getStatus() {
+		return status;
+	}
+
+	public boolean isConnected() {
+		return getStatus().equals(CONNECTION_STATUS.ALIVE);
+	}
+
 }

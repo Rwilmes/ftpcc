@@ -5,6 +5,8 @@ import java.io.IOException;
 
 import ftpcc.crypto.Crypto;
 import ftpcc.gui.MainFrame;
+import ftpcc.network.FsConnection;
+import ftpcc.network.FsConnectionManager;
 import ftpcc.utils.IO;
 import ftpcc.utils.Log;
 
@@ -25,8 +27,39 @@ public class Exec {
 
 	public static void main(String[] args) throws IOException {
 		// cryptoTest();
-		guiTest();
+//		guiTest();
+		
+		fsTest();
 	}
+	
+	public static void fsTest() {
+		Log.log("fs test");
+		
+		FsConnectionManager fcm = new FsConnectionManager();
+		FsConnection c = (FsConnection) fcm.connect("data/");
+		
+		String[] list = c.ls();
+		for(String s : list) {
+			System.out.println("\t" + s);
+		}
+		
+		System.out.println("");
+		System.out.println(fcm.getConnectionStatus(c));
+		
+		
+		fcm.disconnect(c);
+		
+		System.out.println(fcm.getConnectionStatus(c));
+
+	
+	
+		list = c.ls();
+		for(String s : list) {
+			System.out.println("\t" + s);
+		}
+	}
+	
+	
 
 	public static void guiTest() {
 		Log.log("gui test");
